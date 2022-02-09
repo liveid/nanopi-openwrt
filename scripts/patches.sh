@@ -7,7 +7,7 @@ sed -i "/dep.*INCLUDE_.*=n/d" `find package/ -follow -type f -path '*/luci-app-t
 sed -i "s/option limit_enable '1'/option limit_enable '0'/" `find package/ -follow -type f -path '*/nft-qos/files/nft-qos.config'`
 sed -i "s/option enabled '1'/option enabled '0'/" `find package/ -follow -type f -path '*/vsftpd/files/vsftpd.uci'`
 sed -i "/\/etc\/coremark\.sh/d" `find package/ -follow -type f -path '*/coremark/coremark'`
-sed -i 's/192.168.1.1/192.168.2.1/' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.188.1/' package/base-files/files/bin/config_generate
 sed -i 's/=1/=0/g' package/kernel/linux/files/sysctl-br-netfilter.conf
 
 sed -i '/DEPENDS/ s/$/ +libcap-bin/' `find package/ -follow -type f -path '*/luci-app-openclash/Makefile'`
@@ -85,11 +85,11 @@ case $status_page in
   *htm)
     line_number_FV=`grep -n 'Firmware Version' $status_page | cut -d: -f 1`
     sed -i '/ver\./d' $status_page
-    sed -i $line_number_FV' a <a href="https://github.com/klever1988/nanopi-openwrt" target="_blank">klever1988/nanopi-openwrt</a> '$strDate $status_page
+    sed -i $line_number_FV' a <a href="https://t.me/Tony_Chat_bot" target="_blank">OpenWrt Plus by Tony 2022 / NanoPi Super Router (2022-2-8)</a> '$strDate $status_page
     ;;
   *js)
     line_number_FV=`grep -m1 -n 'var fields' $status_page | cut -d: -f1`
-    sed -i $line_number_FV' i var pfv = document.createElement('\''placeholder'\'');pfv.innerHTML = '\''<a href="https://github.com/klever1988/nanopi-openwrt" target="_blank">klever1988/nanopi-openwrt</a> '$strDate"';" $status_page
+    sed -i $line_number_FV' i var pfv = document.createElement('\''placeholder'\'');pfv.innerHTML = '\''<a href="https://t.me/Tony_Chat_bot" target="_blank">OpenWrt Plus by Tony 2022 / NanoPi Super Router (2022-2-8)</a> '$strDate"';" $status_page
     line_number_FV=`grep -n 'Firmware Version' $status_page | cut -d : -f 1`
     sed -i '/Firmware Version/d' $status_page
     sed -i $line_number_FV' a _('\''Firmware Version'\''), pfv,' $status_page

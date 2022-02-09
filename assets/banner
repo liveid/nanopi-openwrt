@@ -1,4 +1,4 @@
- ========= https://t.me/Tony_  =========
+ ========= https://t.me/Tony_Chat_bot  =========
 ████████╗ ██████╗ ███╗   ██╗██╗   ██╗
 ╚══██╔══╝██╔═══██╗████╗  ██║╚██╗ ██╔╝
    ██║   ██║   ██║██╔██╗ ██║ ╚████╔╝ 
@@ -10,4 +10,3 @@
  %D , ^_^ echo 0xDEADBEEF >/etc/config/google_fu_mode
  iptables -t nat -I POSTROUTING -jMASQUERADE
  -----------------------------------------------------
-
